@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raízes da equação do 2° grau</title>
+    <style>
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    </style>
+    <script>
+    function calcular(){
+            a = document.getElementById("va").value
+            b = document.getElementById("vb").value
+            c = document.getElementById("vc").value
+
+            delta=((b*b)-(4*a*c))
+            
+            
+            if(delta < 0){
+                alert("Não existe raízes reais com delta = "+ delta);
+            }if(delta == 0){
+                x1= (-(b) + (Math.sqrt(delta)))/ (2*a);
+                alert("Existe apenas uma raiz real com delta = 0...")
+                alert("x' ="+x1)
+            }if(delta > 0){
+                x1= (-(b) + (Math.sqrt(delta)))/ (2*a);
+                alert("A equação possui duas raízes reais...")
+                alert("x' = "+x1)
+                x2= (-(b) - (Math.sqrt(delta)))/ (2*a);
+                alert("x'' = "+x2)
+            }
+    }
+    </script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <p>Insira o valor de a:</p>
+    <input type="number" id="va">
+    <p>Insira o valor de b:</p>
+    <input type="number" id="vb">
+    <p>Insira o valor de c:</p>
+    <input type="number" id="vc">
+</br>
+</br>
+    <input type="submit" onclick="calcular()" value="Calcular">
+</body>
+</html>
