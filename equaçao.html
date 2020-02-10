@@ -19,13 +19,13 @@
             delta=((b*b)-(4*a*c))
             
             
-            if(delta < 0){
+            if (delta < 0){
                 alert("Não existe raízes reais com delta = "+ delta);
-            }if(delta == 0){
+            } else if (delta == 0){
                 x1= (-(b) + (Math.sqrt(delta)))/ (2*a);
                 alert("Existe apenas uma raiz real com delta = 0...")
                 alert("x' ="+x1)
-            }if(delta > 0){
+            } else if (delta > 0){
                 x1= (-(b) + (Math.sqrt(delta)))/ (2*a);
                 alert("A equação possui duas raízes reais...")
                 alert("x' = "+x1)
